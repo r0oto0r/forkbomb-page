@@ -1,0 +1,8 @@
+.consoleInput input {
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  line-height: normal;
+  color: #282828;
+  outline: none;
+}

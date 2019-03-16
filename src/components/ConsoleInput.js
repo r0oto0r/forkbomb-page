@@ -1,8 +1,16 @@
-import React from 'react'
-import { Input } from 'semantic-ui-react'
+import React, { Fragment } from 'react'
+import ConsoleLinePrefix from './ConsoleLinePrefix'
+
+const consoleInputStyle = {
+  backgroundColor: 'transparent',
+  color: 'white'
+}
 
 const ConsoleInput = () => (
-  <Input />
+  <Fragment className="consoleInput">
+    <ConsoleLinePrefix />
+    <input type="text" style={consoleInputStyle} name="name" />
+  </Fragment>
 )
 
 export default ConsoleInput

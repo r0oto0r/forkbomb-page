@@ -1,23 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Container, Item } from 'semantic-ui-react'
+import ConsoleLinePrefix from './ConsoleLinePrefix'
 
 const consoleOutputLineStyle = {
-  color: 'white',
-  backgroundColor: 'black'
-}
-
-const consoleOutputContainerStyle = {
-  height: '90vh',
-  width: '100vw'
+  color: 'white'
 }
 
 const ConsoleOutput = ({ console }) => (
   <div>
-    <Container style={consoleOutputContainerStyle} fluid>
+    <Container fluid>
     {console.out.lines.map((line) => (
       <Item key={line.nr.toString()} style={consoleOutputLineStyle}>
         <Item.Content>
+          <ConsoleLinePrefix />
           {line.content}
         </Item.Content>
       </Item>
